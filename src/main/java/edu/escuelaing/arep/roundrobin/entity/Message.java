@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class Message implements Serializable {
+        private Long id;
         private String message;
         private Date date;
 
@@ -12,7 +13,6 @@ public class Message implements Serializable {
         }
 
         public Message(String message){
-
             this.message = message;
             this.date = new Date();
         }
@@ -32,5 +32,13 @@ public class Message implements Serializable {
 
         public void setDate(Date date) {
             this.date = date;
+        }
+
+        public Long getId() {
+            return id;
+        }
+
+        public void setId(Long id) {
+            this.id = id;
         }
 }
