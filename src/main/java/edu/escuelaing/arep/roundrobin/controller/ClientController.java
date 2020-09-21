@@ -17,14 +17,15 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class ClientController {
-    private final String[] restServicesAdd =  {"http://localhost:8081/message/add",
-                                               "http://localhost:8082/message/add",
-                                               "http://localhost:8083/message/add"};
+    private final String[] restServicesAdd =  {"http://ec2-18-233-64-239.compute-1.amazonaws.com:35000/message/add",
+                                               "http://ec2-18-233-64-239.compute-1.amazonaws.com:35001/message/add",
+                                               "http://ec2-18-233-64-239.compute-1.amazonaws.com:35002/message/add"};
 
-    private final String[] restServicesGet =  {"http://localhost:8081/message/get",
-                                               "http://localhost:8082/message/get",
-                                               "http://localhost:8083/message/get"};
+    private final String[] restServicesGet =  {"http://ec2-18-233-64-239.compute-1.amazonaws.com:35000/message/get",
+                                               "http://ec2-18-233-64-239.compute-1.amazonaws.com:35001/message/get",
+                                               "http://ec2-18-233-64-239.compute-1.amazonaws.com:35002/message/get"};
 
     private int nService = 0;
 
@@ -69,10 +70,9 @@ public class ClientController {
      * @return numero que define el servicio a utiliza ( 0, 1, 2 )
      */
     private int service(){
-        if(nService == 3){
-            this.nService = 0;
-        } else {
-            this.nService++;
+        this.nService++;
+        if(this.nService == 4){
+            this.nService = 1;
         }
         return nService - 1;
     }
