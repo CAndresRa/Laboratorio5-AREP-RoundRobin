@@ -7,6 +7,10 @@
 
 ![](https://github.com/CAndresRa/RoundRobinApp/blob/master/ImagenesMicroservices/video.gif)
 
+#### Arquitectura
+
+* La arquitectura se encuentra explicada en el siguiente documento [modularización con virtualización e Introducción a Docker y a AWS](https://github.com/CAndresRa/Laboratorio5-AREP-RoundRobin/blob/master/arqarep.pdf)
+
 #### Dockerfile
 
 * Se crea el archivo dockerfile para la creación de la imagen mediante el mismo.
@@ -109,6 +113,10 @@ sudo usermod -a -G docker ec2-user
 #### Imagenes en AWS
 
 ![](https://github.com/CAndresRa/RoundRobinApp/blob/master/ImagenesMicroservices/las%20imagenes%20en%20aws.png)
+
+#### JavaDocs
+
+* La documentacíon de este proyecto se encuentra en: [JavaDocs](https://github.com/CAndresRa/Laboratorio5-AREP-RoundRobin/tree/master/Javadoc)
 
 
 
